@@ -1,0 +1,20 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace Exercise7ApiWeb.Controllers
+{
+    public class MaiorNumeroController : Controller
+    {
+        [HttpGet("MaiorNumero")]
+        public string MaiorNumero(double numeroUsuario1, double numeroUsuario2)
+        {
+            double numero1, numero2;
+            numero1 = numeroUsuario1;
+            numero2 = numeroUsuario2;
+            if (numero1 > numero2)
+            {
+                return $"O maior número é {numero1}";
+            }
+            return $"O maior número é {numero2}";
+        }
+    }
+}
