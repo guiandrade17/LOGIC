@@ -1,4 +1,4 @@
-# LPR – Lógica de Programação
+# LOGIC – Lógica de Programação
 
 Repositório das atividades desenvolvidas durante a disciplina de Lógica de Programação no CEUB.  
 As atividades são implementadas na linguagem C#, com projetos divididos entre aplicações Console e API Web.
