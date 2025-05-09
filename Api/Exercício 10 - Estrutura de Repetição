@@ -1,0 +1,48 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace ApiExemplosEstruturaRepeticao.Controllers
+{
+    public class ExemploEstruturaRepeticao1Controller : Controller
+    {
+        [HttpPost("ExEstruturaRepeticaoTesteInicio")]
+        public String ExEstruturaRepeticaoTesteInicio(int numeroUsuario)
+        {
+            string resultado = "";
+            
+            while (numeroUsuario < 100)
+            {
+                resultado += $"Seja bem-vindo Usuário {numeroUsuario}\n\r"; 
+                numeroUsuario++;
+            }
+            return resultado;
+        }
+        [HttpPost("ExEstruturaRepeticaoTesteFinal")]
+        public String ExEstruturaRepeticaoTesteFinal(int numeroUsuario)
+        {
+            string resultado = "";
+
+            do
+            {
+                numeroUsuario++;
+                resultado += $"Seja bem-vindo Usuário {numeroUsuario}\n\r";
+
+
+            } while (numeroUsuario < 100);
+
+            return resultado;
+        }
+        [HttpPost("ExEstruturaRepeticaoComVariaveisControle")]
+        public String ExEstruturaRepeticaoComVariaveisControle()
+        {
+            string resultado = "";
+            for (int i = 0; i <= 10; i++)
+            {
+                resultado += $"Usuário {i}\r\n";
+            }
+
+            return resultado;
+        }
+
+
+    }
+}
