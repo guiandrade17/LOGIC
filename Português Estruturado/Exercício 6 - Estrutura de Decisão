@@ -1,0 +1,31 @@
+1)Exemplo Estrutura de decisão simples - Português estruturado
+ALGORITMO_SOMA_VALORES
+VAR numero1, numero 2, somaValores : REAL
+INICIO
+|ESCREVA("Informe o valor do número 1")
+|LEIA(numero1)
+|ESCREVA("Informe o valor do número 2")
+|LEIA(numero1)
+|somaValares←(numero1+numero2)
+|    SE(somaValares>10) ENTÃO
+| ESCREVA ("O VALOR DA SOMA É"+somaValores)
+| FIM-SE
+
+4)Exemplo algoritmo media 3 notas Português estruturado
+ALGORITMO_MEDIA_ARITMETICA  
+VAR nota1, nota2, nota3, mediaAritmetica : REAL  
+    resultado : CARACTER  
+INICIO  
+| ESCREVA("Informe a nota 1")  
+| LEIA(nota1)  
+| ESCREVA("Informe a nota 2")  
+| LEIA(nota2)  
+| ESCREVA("Informe a nota 3")  
+| LEIA(nota3)  
+| media←(nota1+nota2+nota3)/3  
+| SE (media>=6) ENTÃO  
+| | resultado←("O aluno está aprovado")  
+| SENAO  
+| | resultado←("O aluno está reprovado")  
+| FIM-SE  
+FIM  
