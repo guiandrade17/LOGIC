@@ -1,0 +1,23 @@
+3)Exemplo Estrutura de decisão simples - Web API
+using Microsoft.AspNetCore.Mvc;
+
+namespace API_SOMA_VALORES.Controllers
+{
+    O referências
+    public class SomaValoresController : ControllerBase
+    {
+        [HttpPost("SomaValores")]
+        O referências
+        public string SomaValores(double numero1, double numero2)
+        {
+            double somaValores;
+            somaValores = numero1 + numero2;
+            if (somaValores > 10)
+            {
+                return "A soma dos valores é " + somaValores;
+            }
+
+            return "";
+        }
+    }
+}
