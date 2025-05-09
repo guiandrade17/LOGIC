@@ -1,0 +1,103 @@
+1) using Microsoft.AspNetCore.Mvc;
+
+namespace WebApiExercicio.Controllers
+{
+    public class Exercicio1ParlmparController : ControllerBase
+    {
+        [HttpPost("VerificarNumeroParImpar")]
+        public String VerificarNumeroParImpar(Int32 numero)
+        {
+            String resultado;
+            // if(numero % 2 == 0)
+            // {
+            //     resultado = " é par";
+            // }else
+            // {
+            //     resultado = " é ímpar";
+            // }
+            //Usando Operadores Ternários
+            resultado = (numero % 2 == 0) ? "Par" : "Impar";
+            return $"O {numero} é {resultado}";
+        }
+    }
+}
+
+2) using System.Data;
+using Microsoft.AspNetCore.Mvc;
+
+namespace WebApiExercicio.Controllers
+{
+    public class Exercicio2NotaAlunoController : ControllerBase
+    {
+        [HttpPost("NotaAluno")]
+        public String NotaAluno(double nota)
+        {
+            String resultado;
+            if ((nota >= 0) || (nota <= 10))
+            {
+                if (nota >= 6)
+                {
+                    resultado = "Aprovado";
+                }
+                else
+                {
+                    resultado = "Reprovado";
+                }
+            } 
+            else
+            {
+                return "Informe um número de 0 a 10";
+            }
+            return resultado;
+        }
+    }
+}
+
+3) using Microsoft.AspNetCore.Mvc;
+
+namespace WebApiExercicio.Controllers
+{
+    public class Exercicio3PrecoProdutoController : ControllerBase
+    {
+        [HttpPost("PrecoProduto")]
+        public String PrecoProduto(double valorInicial)
+        {
+            double valorFinal, desconto;
+            desconto = (valorInicial > 100) ? valorInicial * 0.1 : 0;
+            valorFinal = valorInicial - desconto;
+            return $"O valor inicial {valorInicial} e teve um desconto de {desconto} " +
+                   $"e o seu valor final será de {valorFinal}"; 
+        }
+    }
+}
+
+4) using Microsoft.AspNetCore.Mvc;
+
+namespace WebApiExercicio.Controllers
+{
+    public class Exercicio4NumeroPositivoNegativoController : ControllerBase
+    {
+        [HttpPost("NumeroPositivoNegativoNulo")]
+        public string NumeroPositivoNegativoNulo(Int32 numero)
+        {
+            String resultado;
+            resultado = (numero > 0) ? "Positivo" : (numero < 0) ? "Negativo" : "Nulo";
+            //if (numero > 0)
+            //{
+            //    resultado = "Positivo";
+            //}
+            //else
+            //{
+            //    if (numero < 0)
+            //    {
+            //        resultado = "Negativo";
+            //    }
+            //    else
+            //    {
+            //        resultado = "Nulo";
+            //    }
+            //}
+            return $"O número {numero} é {resultado}";
+        }
+    }
+} 
