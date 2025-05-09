@@ -1,0 +1,100 @@
+1.Cálculo da Média Ponderada: Desenvolva um algoritmo que receba
+Fórmula: Média Ponderada = (N1 * P1 + N2 * P2 + N3 * P3)/(P1 + P2 + P3)
+
+ALGORITMO_MEDIA_PONDERADA
+VAR nota1, nota2, nota3,
+    peso1, peso2, peso3,
+    mediaPonderada: REAL 
+INICIO
+| Escreva ("Informe a nota 1")
+| Leia(nota1)
+| Escreva ("Informe a nota 2")
+| Leia(nota2)
+| Escreva ("Informe a nota 3")
+| Leia(nota3)
+| Escreva ("Informe o peso 1")
+| Leia(peso1)
+| Escreva ("Informe o peso 2")
+| Leia(peso2)
+| Escreva ("Informe o peso 3")
+| Leia(peso3)
+|      mediaPonderada←(nota1*peso1+nota2*peso2+nota3*peso3)/(peso1+peso2+peso3)
+| Escreva ("A média ponderada das notas informadas é"+mediaPonderada)
+FIM
+
+2. ALGORITMO_CONVERSÃO_HH:MM:SS
+VAR segundos, horas, minutos, resto_segundos: INTEIRO
+INICIO
+| Escreva ("Informe o tempo em segundos:")
+| Leia(segundos)
+| hora = segundos // 3600
+| resto_segundos = segundos % 3600
+| minuto = resto_segundos // 60
+| resto_segundos = resto_segundos % 60
+| Escreva("O tempo formatado é:", horas,":", minutos,":", resto_segundos)
+FIM
+
+3.ALGORITMO_CALCULO_SALARIO_LIQUIDO
+VAR salario_bruto, percentual_desconto, salario_liquido: REAL
+
+INICIO 
+| Escreva ("Informe o salário bruto")
+| Leia(salario_bruto)
+| Escreva ("Informe o percentual de desconto do INSS (em %)")
+| Leia(percentual_desconto)
+| salario_liquido = salario_bruto - (salario_bruto*percentual_desconto/100)
+| Escreva ("O salário líquido é: ", salario_liquido)
+FIM
+
+4.ALGORITMO_CALCULO_DISTANCIA
+VAR x1, y1, x2, y2, distancia: REAL
+
+INICIO
+| Escreva ("Informe a coordenada x1")
+| Leia(x1)
+| Escreva ("Informe a coordenada y1")
+| Leia  (y1)
+| Escreva ("Informe a coordenada x2")
+| Leia(x2)
+| Escreva ("Informe a coordenada y2")
+| Leia(y2)
+| distancia = RAIZ_QUADRADA((x2-x1)^2 + (y2-y1)^2)
+| Escreva ("A distância entre os pontos é: ", distancia)
+FIM
+
+5.ALGORITMO_CALCULO_VOLUME_ESFERA
+VAR raio, volume: REAL
+CONST PI: 3,14
+
+INICIO
+| Escreva ("Informe o raio da esfera: ")
+| Leia(raio) 
+| volume = (4/3)*PI*(raio^3)
+| Escreva ("O volume da esfera é: ", volume)
+FIM
+
+6.ALGORITMO_CALCULO_MEDIA
+VAR nota1, nota2, nota3, nota4, media: REAL
+
+INICIO
+| Escreva ("Informe a nota 1")
+| Leia(nota1)
+| Escreva ("Informe a nota 2")
+| Leia(nota2)
+| Escreva ("informe a nota 3")
+| Leia(nota3)
+| Escreva ("Informe a nota 4")
+| Leia(nota4)
+|   media = (nota1+nota2+nota3+nota4)/4
+| Escreva ("A média das quatro notas é: ", media)
+FIM
+
+8. ALGORITMO_CONVERSÃO_METROS_PARA_CENTIMETROS
+VAR metros, centímetros: REAL
+
+INICIO
+| Escreva ("Informe o valor em metros")
+| Leia(metros)
+| metros← centímetros = metros * 100
+| Escreva (metros, "metros equivalem a", centimetros,"centímetros")
+FIM
