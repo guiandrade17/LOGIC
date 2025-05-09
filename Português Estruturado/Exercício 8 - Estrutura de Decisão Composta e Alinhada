@@ -1,0 +1,161 @@
+7)ALGORITMO_MAIOR_NUMERO_3
+VAR numero1, numero2, numero3 : REAL
+INICIO
+| ESCREVA("Informe o primeiro número")
+| LEIA(numero1)
+| ESCREVA("Informe o segundo número")
+| LEIA(numero2)
+| ESCREVA("Informe o terceiro número")
+| LEIA(numero3)
+| maior ← numero1
+| SE (numero2 > maior) ENTÃO
+|  | maior ← numero2 
+| FIM-SE
+| SE (numero3 > maior) ENTÃO
+|  | maior ← numero3
+| FIM-SE
+| SENAO
+| ESCREVA ("Os números são iguais")
+FIM
+
+8)ALGORITMO_IDADE_NADADOR
+VAR idade: INTEIRO, categoria: CARACTER
+INICIO
+| ESCREVA("Digite a idade do nadador")
+| LEIA(idade)
+| SE (idade >= 5) E (idade <= 7) ENTÃO
+| categoria ← "Infantil A"
+| SENAO SE (idade >= 8) E (idade <= 11) ENTÃO
+| categoria ← "Infantil B"
+| SENAO SE (idade >= 12) E (idade <= 13) ENTÃO
+| categoria ← "Juvenil A"
+| SENAO SE (idade >= 14) E (idade <= 17) ENTÃO
+| categoria ← "Juvenil B"
+| SENAO SE (idade >= 18) ENTÃO
+| categoria ← "Adultos"
+| SENAO
+| categoria ← "Idade não categorizada"
+| FIM-SE
+| ESCREVA ("Categoria: ", categoria)
+FIM
+
+9)ALGORITMO_TIPO_TRIANGULO
+VAR A, B, C: REAl, tipo: CARACTERE
+INICIO
+| ESCREVA("Digite os 3 lados do triângulo (separados por espaço):")
+| LEIA(A,B,C)
+| SE (A < B + C) E (B < A + C) E (C < A + B) ENTÃO
+| tipo ← "Equilátero"
+| SENAO SE (A = B) E (A = C) E (B = C) ENTÃO
+| tipo ← "Isóceles"
+| SENAO 
+| tipo ← "Escaleno"
+| FIM-SE
+| ESCREVA("Triângulo", tipo)
+| SENAO
+| ESCREVA("Não forma triângulo")
+| FIM-SE
+FIM
+
+10)ALGORITMO_SITUACAO_ALUNO
+VAR matricula: CARACTERE, nota1,nota2,media: REAL, situacao: CARACTERE
+INICIO
+| ESCREVA("Digite a matrícula")
+| LEIA(matricula)
+| ESCREVA("Digite a primeira nota")
+| LEIA(nota1)
+| ESCREVA("Digite a segunda nota")
+| LEIA(nota2)
+| media ← (nota1 + nota2) / 2
+| SE (media > 7) ENTÃO
+| situacao ← "Aprovado"
+| SENAO SE (media = 7) ENTÃO
+| situacao ← "Recuperação"
+| SENAO SE (media < 7) ENTÃO
+| situacao ← "Reprovado"
+| FIM-SE
+| ESCREVA(matricula,"-Média:", media,"-",situacao)
+FIM 
+
+11)ALGORITMO_DESCONTO_CAMISETAS
+VAR codigo,tamanho: CARACTERE , preco,desconto,precoFinal: REAL
+INICIO
+| ESCREVA("Digite o código")
+| LEIA(codigo)
+| ESCREVA("Digite o preço em R$")
+| LEIA(preco)
+| ESCREVA("Digite o tamanho (G/M/P)")
+| LEIA(tamanho)
+| tamanho ← MAIUSCULA(tamanho)
+| SE (tamanho = "G") ENTÃO
+| desconto ← 0.1
+| SENAO SE (tamanho = "M") ENTÃO
+| desconto ← 0.2
+| SENAO SE (tamanho = "P") ENTÃO
+| desconto ← 0.3
+| FIM-SE
+| ESCREVA(codigo,"| Tamanho:", tamanho,"| Original: R$", preco,"| Com desconto: R$", precoFinal)
+FIM
+
+12)ALGORITMO_CALCULO_IR
+VAR salario,imposto: REAL
+INICIO
+| ESCREVA("Digite o salário em R$")
+| LEIA(salario)
+| SE (salario <= 1200) ENTÃO
+| imposto ← 0 
+| SENAO SE (salario <= 2500)
+| imposto ← salario * 0.05
+| SENAO SE (salario <= 4000)
+| imposto ← salario * 0.08
+| SENAO SE (salario <= 7000)
+| imposto ← salario * 0.12
+| SENAO
+| imposto ← salario * 0.275
+| FIM-SE
+| ESCREVA("Salário: R$", salario,"| IR: R$", imposto)
+FIM 
+
+13) a-SE NAO(D > 5) ENTAO
+    X <- (A + B) * D
+SENAO
+    X <- (A - B) / C
+FIM_SE
+
+    b-SE (A > 2) E (B < 7) ENTAO
+    X <- (A + 2) * (B - 2)
+SENAO
+    X <- (A + B) / D * (C + D)
+FIM_SE
+
+14)ALGORITMO_DIA_SEMANA
+VAR dia: INTEIRO, dias: VETOR[1..7] DE CARACTERE
+INICIO
+| dias ← ["DOMINGO", "SEGUNDA", "TERÇA", "QUARTA","QUINTA", "SEXTA", "SÁBADO"]
+| ESCREVA("Digite um número (1-7)")
+| LEIA(dia)
+| SE (dia >= 1) E (dia <= 7) ENTÃO
+| ESCREVA(dias[dia])
+| SENAO
+| ESCREVA("Número inválido")
+| FIM-SE
+FIM
+
+15)ALGORITMO_REAJUSTE_SALARIO
+VAR salario, novoSalario, reajuste: REAL, profissao: CARACTERE
+INICIO
+| ESCREVA("Digite o salário em R$")
+| LEIA(salario)
+| ESCREVA("Digite um profissão")
+| LEIA(profissao)
+| profissao ← MAIUSCULA(profissao)
+| SE (profissao = "Técnico") ENTÃO
+| reajuste ← 0.15
+| SENAO SE (profissao = "Gerente") ENTÃO
+| reajuste ← 0.13
+| SENAO
+| reajuste ← 0.11
+| FIM-SE
+| novoSalario ← salario * (1 + reajuste)
+| ESCREVA(profissão,"| Salário atual: R$", salario,"| Reajustado: R$", novoSalario)
+FIM
