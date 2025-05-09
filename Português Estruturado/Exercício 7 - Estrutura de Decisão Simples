@@ -1,0 +1,78 @@
+1)ALGORITMO_METADE_MAIOR_50
+VAR numero, metade : REAL
+INICIO
+| ESCREVA("Digite um número:")
+| LEIA(numero)
+| metade ← numero / 2
+| SE (numero > 50) ENTAO
+|  | ESCREVA("O número é maior que 50, e sua metade é: " + metade)
+| SENAO
+|  | ESCREVA("O número não é maior que 50.")
+FIM
+
+
+2)ALGORITMO_DOBRO
+VAR numero, dobro : REAL
+INICIO
+| ESCREVA("Informe um número:")
+| LEIA(numero)
+| SE (numero > 90) E (numero < 100) ENTAO
+|  | dobro ← numero * 2
+|  | ESCREVA("O número está entre 90 e 100, e seu dobro é: " + dobro)
+| SENAO
+|  | ESCREVA("O número não está no intervalo entre 90 e 100.")
+FIM
+
+
+3)ALGORITMO_QUINTA_PARTE
+VAR numero, quintaParte : REAL
+INICIO
+| ESCREVA("Informe um número:")
+| LEIA(numero)
+| quintaParte ← numero / 5
+| SE (numero > 50) E (numero > 1000) ENTAO
+|  | ESCREVA("O número é maior que 50 e maior que 1000. Sua quinta parte é: " + quintaParte)
+| SENAO
+|  | ESCREVA("O número não atende aos critérios.")
+FIM
+
+
+4)ALGORITMO_SEXTUPLO
+VAR numero, sextuplo : REAL
+INICIO
+| ESCREVA("Informe um número:")
+| LEIA(numero)
+| SE (numero > 90) ENTAO
+|  | sextuplo ← numero * 6
+|  | ESCREVA("O número é maior que 90, e seu sêxtuplo é: " + sextuplo)
+| SENAO
+|  | ESCREVA("O número não é maior que 90.")
+FIM
+
+
+5)ALGORITMO_NUMERO_PAR
+VAR numero : INTEIRO
+INICIO
+| ESCREVA("Informe um número:")
+| LEIA(numero)
+| SE (numero MOD 2 = 0) ENTAO
+|  | ESCREVA("O número " + numero + " é par.")
+| SENAO
+|  | ESCREVA("O número " + numero + " é ímpar.")
+FIM
+
+
+6)ALGORITMO_MAIOR_NUMERO
+VAR numero1, numero2 : REAL
+INICIO
+| ESCREVA("Informe o primeiro número:")
+| LEIA(numero1)
+| ESCREVA("Informe o segundo número:")
+| LEIA(numero2)
+| SE (numero1 > numero2) ENTAO
+|  | ESCREVA("O maior número é: " + numero1)
+| SENAO SE (numero2 > numero1) ENTAO
+|  | ESCREVA("O maior número é: " + numero2)
+| SENAO
+|  | ESCREVA("Os números são iguais.")
+FIM
