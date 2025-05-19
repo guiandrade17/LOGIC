@@ -1,0 +1,91 @@
+Estrutura de Repetição
+6) using System;
+
+class Program
+{
+    static void Main()
+    {
+        int totalAlunos = 45;
+        double somaIdadesMenores170 = 0;
+        int contMenores170 = 0;
+        double somaAlturasMaiores20 = 0;
+        int contMaiores20 = 0;
+
+        for (int i = 1; i <= totalAlunos; i++)
+        {
+            Console.Write($"Digite a idade do aluno {i}: ");
+            int idade = int.Parse(Console.ReadLine());
+
+            Console.Write($"Digite a altura do aluno {i} (em metros, ex: 1.75): ");
+            double altura = double.Parse(Console.ReadLine());
+
+            if (altura < 1.70)
+            {
+                somaIdadesMenores170 += idade;
+                contMenores170++;
+            }
+
+            if (idade > 20)
+            {
+                somaAlturasMaiores20 += altura;
+                contMaiores20++;
+            }
+        }
+
+        double mediaIdade = contMenores170 > 0 ? somaIdadesMenores170 / contMenores170 : 0;
+        double mediaAltura = contMaiores20 > 0 ? somaAlturasMaiores20 / contMaiores20 : 0;
+
+        Console.WriteLine($"\nIdade média dos alunos com menos de 1,70m: {mediaIdade:F2} anos");
+        Console.WriteLine($"Altura média dos alunos com mais de 20 anos: {mediaAltura:F2} m");
+    }
+}
+
+7)using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número para calcular o fatorial: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        long fatorial = 1;
+        for (int i = numero; i > 1; i--)
+        {
+            fatorial *= i;
+        }
+
+        Console.WriteLine($"{numero}! = {fatorial}");
+    }
+}
+
+8)using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Números pares entre 1 e 100:");
+        for (int i = 2; i <= 100; i += 2)
+        {
+            Console.Write($"{i} ");
+        }
+        Console.WriteLine(); // quebra de linha
+    }
+}
+
+9) using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Sequência descendente de 100 até 10:");
+        for (int i = 100; i >= 10; i--)
+        {
+            Console.Write($"{i} ");
+        }
+        Console.WriteLine(); // quebra de linha
+    }
+}
+
