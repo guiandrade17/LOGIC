@@ -1,0 +1,191 @@
+4)Int32[] numerosPares = new int[10];
+Int32[] numerosImpares = new int [10];
+Int32 numero;
+Console.WriteLine("Informe 10 números para ter uma listagem de pares e ímpares");
+
+for (int i = 0; i < numerosPares.Length; i++)
+{
+    Console.WriteLine($"Informe o {i + 1}° número de 10");
+    numero = Convert.ToInt32(Console.ReadLine());
+    if(numero % 2 == 0)
+    {
+        numerosPares[i] = numero;
+    }
+    else
+    {
+        numerosImpares[i] = numero;
+    }
+}
+Console.WriteLine("Números pares digitados:");
+for (int i = 0; i < numerosPares.Length; i++)
+{
+    if (numerosPares[i] != 0)
+    {
+        Console.WriteLine(numerosPares[i]);
+    } 
+}
+Console.WriteLine("Números impares digitados");
+for (int i = 0;i < numerosImpares.Length; i++)
+{
+    if (numerosImpares[i] != 0)
+    {
+        Console.WriteLine(numerosImpares[i]);
+    }
+}
+
+5)Console.WriteLine("Informe quantas notas serão cadastradas");
+int quantidadeNotas = Convert.ToInt16(Console.ReadLine());
+
+double[] notas = new double[quantidadeNotas];
+
+for (int i = 0; i < quantidadeNotas; i++)
+{
+    Console.WriteLine($"Informe a {1 + i}° nota do aluno");
+    notas[i] = Convert.ToDouble(Console.ReadLine());
+}
+
+Console.WriteLine($"Resultado da Avaliação do {quantidadeNotas} alunos");
+
+for  (int i = 0;i < quantidadeNotas; i++)
+{
+    string avaliacao;
+    if (notas[i] >= 9)
+    {
+        avaliacao = "Excelente";
+    }else if (notas[i] >= 7)
+    {
+        avaliacao = "Bom";
+    }else if (notas[i] >= 6) 
+    {
+        avaliacao = "Satisfatório";
+    }else if (notas[i] >= 4)
+    {
+        avaliacao = "Insuficiente";
+    }else
+    {
+        avaliacao = "Reprovado";
+    }
+    Console.WriteLine($"{1 + i}° Nota {notas[i]} - Menção {avaliacao}");   
+}
+
+6)int quantidadeVenda;
+double percentualComissao;
+
+Console.WriteLine("Informe a quantidade de vendas");
+quantidadeVenda = Convert.ToInt16(Console.ReadLine()); ;
+Console.WriteLine("Informe o valor fixo da comissão sobre as vendas");
+percentualComissao = Convert.ToDouble(Console.ReadLine());
+
+double[] vendas = new double[quantidadeVenda]; ;
+double[] comissao = new double[quantidadeVenda];
+double valorTotalComissao = 0;
+for (int i = 0; i < vendas.Length; i++)
+{
+    Console.WriteLine($"Informe o valor da {1 + i}° venda");
+    vendas[i] = Convert.ToDouble(Console.ReadLine());
+    comissao[i] = vendas[i] * (percentualComissao / 100);
+    valorTotalComissao += comissao[i];
+}
+Console.WriteLine("Resultado das vendas e Comissões");
+for (int i = 0; i < comissao.Length; i++)
+{
+    Console.WriteLine($"{1 + i}° venda R$ {vendas[i]} valor da comissão {comissao}");
+}
+Console.WriteLine($"O valor total de comissões a serem pagas é R$ {valorTotalComissao}");
+
+7)Console.WriteLine("Informe quantas avaliações serão cadastradas");
+int quantidadeNotas = Convert.ToInt32(Console.ReadLine());
+
+int[] notas = new int[quantidadeNotas];
+
+for (int i = 0; i < quantidadeNotas; i++)
+{
+    Console.WriteLine($"Informe a {i + 1}° nota do cliente (de 1 a 5):");
+    notas[i] = Convert.ToInt32(Console.ReadLine());
+    
+    while (notas[i] < 1 || notas[i] > 5)
+    {
+        Console.WriteLine("Nota inválida! Digite uma nota entre 1 a 5:");
+        notas[i] = Convert.ToInt32(Console.ReadLine());
+    }
+}
+
+double soma = 0;
+int satisfeitos = 0, neutros = 0, insatisfeitos = 0;
+
+Console.WriteLine($"\nResultado da Avaliação de {quantidadeNotas} clientes:\n");
+for (int i = 0;i < quantidadeNotas; i++)
+{
+    string avaliacao;
+    if (notas[i] >= 4)
+    {
+        avaliacao = "Satisfeito";
+        satisfeitos++;    
+    }else if (notas[i] == 3)
+    {
+        avaliacao = "Neutro";
+        neutros++;
+    }else
+    {
+        avaliacao = "Insatisfeito";
+        insatisfeitos++;
+    }
+    soma += notas[i];
+    Console.WriteLine($"{i + 1}° Nota: {notas[i]} - Avaliação: {avaliacao}");
+}
+
+double media = soma / quantidadeNotas;
+
+Console.WriteLine($"\nMédia geral das avaliações: {media:F2}");
+Console.WriteLine($"Clientes satisfeitos (nota >= 4): {satisfeitos}");
+Console.WriteLine($"Clientes neutros (nota = 3): {neutros}");
+Console.WriteLine($"Clientes insatisfeitos (nota <= 2): {insatisfeitos}");
+
+Console.WriteLine("\nPressione qualquer tecla para sair");
+Console.ReadKey();
+
+8)double[] temperaturas = new double[7];
+
+Console.WriteLine("Digite as temperaturas diárias da semana (em °C):");
+
+for  (int i = 0; i < 7; i++)
+{
+    Console.WriteLine($"Dia {i + 1}: ");
+    temperaturas[i] = Convert.ToDouble(Console.ReadLine());
+}
+
+double soma = 0;
+double max = temperaturas[0];
+double min = temperaturas[0];
+
+for (int i = 0; i < 7; i++)
+{
+    soma += temperaturas[i];
+    if (temperaturas[i] > max)
+        max = temperaturas[i];
+    if (temperaturas[i] < min)
+        min = temperaturas[i];
+}
+
+double media = soma / 7;
+int diasAcimaDaMedia = 0;
+
+for (int i = 0;i < 7; i++)
+{
+    if (temperaturas[i] > media)
+        diasAcimaDaMedia++;
+}
+
+Console.WriteLine("\nRelátorio da Semana:");
+for (int i = 0; i < 7; i++)
+{
+    Console.WriteLine($"Dia{i + 1}: {temperaturas[i]:F1}°C");
+}
+
+Console.WriteLine($"\nTemperatura média da semana: {media:F2}°C");
+Console.WriteLine($"Temperatura mais alta: {max:F1}°C");
+Console.WriteLine($"Temperatura mais baixa: {min:F1}°C");
+Console.WriteLine($"Número de dias com temperatura acima da média: {diasAcimaDaMedia}");
+
+Console.WriteLine("\nPressione qualquer tecla para sair.");
+Console.ReadKey();
